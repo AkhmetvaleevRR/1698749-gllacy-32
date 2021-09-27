@@ -9,12 +9,10 @@
 
 <body>
     <header class="page-header">
+        <a class="logo" href="index.html"><img class="logo-image" alt="Логотип магазина Глейси" src="">
+        </a>
         <nav class="navigation">
             <ul class="navigation-list">
-                <li class="navigation-item">
-                    <a class="navigation-logo" href="index.html"><img class="logo" alt="Логотип магазина Глейси" src="">
-                    </a>
-                </li>
                 <li class="navigation-item"><a class="navigation-link navigation-link-current" href="catalog.html">Каталог</a></li>
                 <li class="navigation-item"><a class="navigation-link" href="delivery.html">Доставка и оплата</a></li>
                 <li class="navigation-item"><a class="navigation-link" href="about.html">О компании</a></li>
@@ -45,7 +43,6 @@
     </header>
     <main class="main-inner">
         <header class="inner-header">
-            <h1 class="inner-header-title">Сливочное мороженое</h1>
             <ul class="breadcrumbs">
                 <li class="breadcrumbs-item">
                     <a class="breadcrumbs-link" href="index.html">Главная</a>
@@ -57,11 +54,12 @@
                     <a class="breadcrumbs-link">Сливочное мороженое</a>
                 </li>
             </ul>
+            <h1 class="inner-header-title">Сливочное мороженое</h1>
         </header>
         <section class="catalog-products">
             <h2 class="visually-hidden">Список товаров с фильтрами</h2>
             <form class="catalog-filter" action="#" method="get">
-                <form class="sorting-type">
+                <fieldset class="sorting-type">
                     <label class="visually-hidden" for="sorting">Сортировка:</label>
                     <select class="select-control" id="sorting" name="sorting">
                       <option value="popular">по популярности</option>
@@ -69,7 +67,7 @@
                       <option value="expensive">по убыванию цены</option>
                     </select>
                     <button class="visually-hidden" type="submit">Применить</button>
-                </form>
+                </fieldset>
                 <fieldset class="catalog-filter-group">
                     <legend class="catalog-filter-title">Цена:</legend>
                     <button class="range-toggle toggle-min" type="button">
