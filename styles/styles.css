@@ -1,0 +1,35 @@
+body {
+    color: #2D3440;
+    background: #FEAFC3;
+    margin: auto;
+}
+
+.about {
+    background: url("../img/backgrounds/background_about.jpg") no-repeat;
+    width: 1170;
+    height: 480;
+}
+
+.post_item {
+    background: url("../img/backgrounds/background_blog.jpg") no-repeat;
+    width: 570;
+    height: 216;
+}
+
+.subscribe {
+    background: url("../img/backgrounds/background_feedback.jpg") no-repeat;
+    width: 570;
+    height: 220;
+}
+
+.delivery {
+    background: url("../img/backgrounds/background_delivery.jpg") no-repeat;
+    width: 1170;
+    height: 534;
+}
+
+.contacts {
+    background: url("../img/backgrounds/background_contact.jpg") no-repeat;
+    width: 1170;
+    height: 492;
+}
