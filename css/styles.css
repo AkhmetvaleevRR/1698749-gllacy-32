@@ -23,7 +23,7 @@
 }
 
 body {
-    font-family: Inter, sans-serif;
+    font-family: Inter, Arial, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -40,10 +40,11 @@ body {
     text-decoration: none;
 }
 
-.contacts-phone {
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 20px;
+.contacts-phone-link {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 24px;
     color: inherit;
 }
 
@@ -154,25 +155,20 @@ body {
     color: inherit;
 }
 
-.contacts h3 {
-    font-size: 20px;
-    line-height: 24px;
-    color: inherit;
-    font-style: normal;
+.contacts-text {
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 20px;
+    color: #565C66
 }
 
-.contacts-address p {
+.contacts-address-text {
+    font-style: normal;
     text-decoration: none;
     font-weight: bold;
     font-size: 20px;
     line-height: 24px;
     color: inherit;
-}
-
-.contacts p {
-    font-size: 14px;
-    line-height: 20px;
-    color: #565C66
 }
 
 .footer-menu-title {
