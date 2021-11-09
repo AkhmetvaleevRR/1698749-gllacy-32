@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="shortcut icon" type="image/png" href="../1698749-gllacy-32/img/icons/favicon_32.png" />
 </head>
 
 <body>
@@ -12,33 +13,73 @@
         <img class="navigation-logo" alt="Логотип магазина Глейси" src="img/logo.svg" width=137 height=56>
         <nav class="navigation">
             <ul class="navigation-list">
-                <li class="navigation-item"><a class="navigation-link" href="catalog.html">Каталог</a></li>
+                <li class="navigation-item">
+                    <a class="navigation-link navigation-link-popover" href="catalog.html">Каталог</a>
+                    <ul class="popover popover-menu-list">
+                        <li class="popover-menu-item">
+                            <h2 class="popover-title "><a class="popover-navigation-link"
+                                    href="catalog.html">Новинки</a></h2>
+                        </li>
+                        <li class="popover-menu-item">
+                            <a class="popover-navigation-link" href="catalog.html">Сливочное</a>
+                        </li>
+                        <li class="popover-menu-item">
+                            <a class="popover-navigation-link" href="catalog.html">Щербеты</a>
+                        </li>
+                        <li class="popover-menu-item">
+                            <a class="popover-navigation-link" href="catalog.html">Фруктовый лед</a>
+                        </li>
+                        <li class="popover-menu-item">
+                            <a class="popover-navigation-link" href="catalog.html">Мелорин</a>
+                        </li>
+                    </ul>
+                </li>
                 <li class="navigation-item"><a class="navigation-link" href="#">Доставка и оплата</a></li>
                 <li class="navigation-item"><a class="navigation-link" href="#">О компании</a></li>
             </ul>
+
             <a class="menu-phone" href="tel:88005558628">+7 800 555-86-28</a>
             <ul class="navigation-list navigation-user">
                 <li class="navigation-item">
-                    <a class="navigation-link" href="#"><svg width="15" height="15" viewbox="0 0 15 15"
-                            xmlns="http://www.w3.org/2000/svg">
+                    <a class="navigation-link navigation-link-popover">
+                        <svg width="15" height="15" viewbox="0 0 15 15" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd"
                                 d="M2.66 7.33a4.67 4.67 0 1 1 9.34 0 4.67 4.67 0 0 1-9.34 0Zm8.42 4.69a6 6 0 1 1 .94-.94l2.45 2.45a.67.67 0 1 1-.94.94l-2.45-2.45Z"
                                 fill="#2D3440" />
                         </svg>
-                        <span class="visually-hidden">Поиск</span>
-                    </a>
+                        <span class="visually-hidden">Поиск</span></a>
+                    <div class="popover popover-search">
+                        <h2 class="popover-title visually-hidden">Поиск</h2>
+                        <input type="text" id="navigation-search" placeholder="Поиск по сайту">
+                        <button class="delete-button">
+                            <span class="visually-hidden">Очистить</span>
+                        </button>
+                    </div>
                 </li>
-                <li class="navigation-item">
-                    <a class="navigation-link" href="#">
+                <li class="navigation-item navigation-item-login">
+                    <a class="navigation-link navigation-link-popover">
                         <img src="img/icons/log-in.svg" alt="Иконка входа" width=15 height=15>
-                        <span>Вход</span>
-                    </a>
+                        <span>Вход</span></a>
+                    <form class="popover popover-login">
+                        <h2 class="popover-title">Личный кабинет</h2>
+                        <input type="text" id="login" placeholder="email@example.com">
+                        <input type="password" id="password" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;">
+                        <div class="popover-container">
+                            <button class="button button-minor" type="submit">Войти</button>
+                            <div class="popover-links">
+                                <a class="popover-link" href="#">Забыли пароль?</a>
+                                <a class="popover-link" href="#">Регистрация</a>
+                            </div>
+                        </div>
+                    </form>
                 </li>
                 <li class="navigation-item">
-                    <a class="navigation-link" href="#">
+                    <a class="navigation-link navigation-link-popover" href="#">
                         <img src="img/icons/cart.svg" alt="Иконка Корзины" width=15 height=15>
-                        <span>Корзина</span>
-                    </a>
+                        <span>Пусто</span></a>
+                    <div class="popover popover-cart">
+                        <h2 class="popover-title">Ваша корзина<br>пока пуста</h2>
+                    </div>
                 </li>
             </ul>
         </nav>
@@ -50,16 +91,17 @@
                 <div class="gallery-container">
                     <h2 class="gallery-title visually-hidden">Галерея</h2>
                     <ol class="slider-list">
-                        <li class="slider-item">
+                        <li class="slider-item slider-item-current">
                             <div class="slider-item-container">
-                                <h3>Нежный пломбир с клубничным джемом</h3>
-                                <p>Натуральное мороженое из свежих сливок и молока с вкуснейшим клубничным джемом – это
+                                <h3>Нежный пломбир <br> с клубничным джемом</h3>
+                                <p>Натуральное мороженое из свежих сливок<br> и молока с вкуснейшим клубничным
+                                    джемом<br> – это
                                     идеальный десерт для всей семьи.</p>
                                 <button class="button button-main" type="button">Заказать</button>
                             </div>
                             <div class="slider-image-container">
-                                <img src="img/gallery/gallery-1.png" alt="Пломбир с клубничным джемом" width=306
-                                    height=507>
+                                <img src="img/gallery/gallery-1.png" alt="Пломбир с клубничным джемом" width=100
+                                    height=150>
                             </div>
                         </li>
                         <li class="slider-item">
@@ -69,8 +111,10 @@
                                     в самый жаркий летний день.</p>
                                 <button class="button button-main" type="button">Заказать</button>
                             </div>
-                            <img src="img/gallery/gallery-2.png" alt="Сливочное мороженое со вкусом банана" width=100
-                                height=150>
+                            <div class="slider-image-container">
+                                <img src="img/gallery/gallery-2.png" alt="Сливочное мороженое со вкусом банана"
+                                    width=100 height=150>
+                            </div>
                         </li>
                         <li class="slider-item">
                             <div class="slider-item-container">
@@ -79,8 +123,11 @@
                                     сладкоежек всех возрастов.</p>
                                 <button class="button button-main" type="button">Заказать</button>
                             </div>
-                            <img src="img/gallery/gallery-3.png" alt="Карамельный пломбир с маршмеллоу" width=100
-                                height=150>
+
+                            <div class="slider-image-container">
+                                <img src="img/gallery/gallery-3.png" alt="Карамельный пломбир с маршмеллоу" width=100
+                                    height=150>
+                            </div>
                         </li>
                     </ol>
                     <div class="slider-button-container">
@@ -158,7 +205,7 @@
                     <li class="banners-item">
                         <div class="banners-item-container">
                             <h3>Малинка даром!</h3>
-                            <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового
+                            <p>При покупке 2 кг любого фруктового<br>мороженого, добавим в ваш заказ банку<br>малинового
                                 варенья бесплатно.</p>
                             <button class="button button-main" type="button">Хочу подарок</button>
                         </div>
@@ -167,7 +214,7 @@
                     <li class="banners-item">
                         <div class="banners-item-container">
                             <h3>Маршмеллоу даром!</h3>
-                            <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку нежных зефирок совершенно
+                            <p>При покупке 2 кг пломбира, добавим<br>в ваш заказ упаковку нежных<br>зефирок совершенно
                                 бесплатно.</p>
                             <button class="button button-main" type="button">Хочу подарок</button>
                         </div>
@@ -264,11 +311,11 @@
             <section class="about">
                 <div class="about-wrap">
                     <h2 class="visually-hidden">О магазине</h2>
-                    <h3>Магазин Глэйси – это онлайн и офлайн-магазин по продаже мороженого собственного проиводства на
+                    <h3>Магазин Глейси – это онлайн и офлайн-магазин по продаже мороженого собственного проиводства на
                         развес</h3>
                     <ul class="about-list">
                         <li class="about-item">
-                            <img src="img/icons/ice-cream.svg" alt="Иконка мороженое" width=48 height="48">
+                            <img src="img/icons/ice-cream.svg" alt="Иконка мороженое" width=46 height="46">
                             <p>Все наше мороженое изготавливается на собственном производстве, с использованием
                                 современного оборудования и проверенных временем технологий.</p>
                         </li>
@@ -322,24 +369,28 @@
                         <p class="delivery-form-date">
                             <span class="form-label form-label-icon">
                                 <label for="delivery-date">Дата</label>
-                                <button class="info" type="button">
+                                <button class="tooltip" type="button">
+                                    <span class="tooltiptext">Введите дату заказа</span>
                                     <svg width="12" height="12" viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd"
                                             d="M8 2.33a5.67 5.67 0 1 0 0 11.34A5.67 5.67 0 0 0 8 2.33ZM1 8a7 7 0 1 1 14 0A7 7 0 0 1 1 8Zm7-.67c.37 0 .67.3.67.67v2.53a.67.67 0 1 1-1.34 0V8c0-.37.3-.67.67-.67ZM8 4.8a.67.67 0 1 0 0 1.33.67.67 0 0 0 0-1.33Z"
                                             fill="#2D3440" />
                                     </svg>
-                                    <span class="visually-hidden">Посмотреть дополнительную информацию</span></button>
+                                </button>
                             </span>
-                            <input type="datetime-local" id="delivery-date" placeholder="01.04.2020">
+                            <input type="text" onfocus="(this.type='date')" id="delivery-date" placeholder="01.04.2020">
                         </p>
                         <p class="delivery-form-phone">
-                            <label for="delivery-phone">Телефон</label>
-                            <input type="tel" id="delivery-phone" placeholder="+7 800 999-00-00">
+                            <span class="form-label">
+                                <label for="delivery-phone">Телефон</label>
+                                <input type="tel" id="delivery-phone" placeholder="+7 800 999-00-00">
+                            </span>
                         </p>
                         <p class="delivery-form-address">
                             <span class="form-label form-label-icon">
                                 <label for="delivery-address">Адрес</label>
-                                <button class="info" type="button">
+                                <button class="tooltip" type="button">
+                                    <span class="tooltiptext">Введите название улицы, дома и квартиры</span>
                                     <svg width="12" height="12" viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd"
                                             d="M8 2.33a5.67 5.67 0 1 0 0 11.34A5.67 5.67 0 0 0 8 2.33ZM1 8a7 7 0 1 1 14 0A7 7 0 0 1 1 8Zm7-.67c.37 0 .67.3.67.67v2.53a.67.67 0 1 1-1.34 0V8c0-.37.3-.67.67-.67ZM8 4.8a.67.67 0 1 0 0 1.33.67.67 0 0 0 0-1.33Z"
@@ -408,7 +459,7 @@
         </section>
         <section class="footer-menu">
             <h2 class="footer-menu-title visually-hidden">Информация для поставщиков</h2>
-            <img src="img/icons/heart-fill.svg" width=14 height=13>
+            <img src="img/icons/heart-fill.svg" width=14 height=13 alt="сердечко">
             <ul class="footer-menu-list">
                 <li class="footer-menu-item">
                     <h3 class="footer-menu-list-title">Для поставщиков</h3>
@@ -433,6 +484,22 @@
             </div>
         </section>
     </footer>
+    <div class="modal-container modal-container-close">
+        <div class="modal modal-feedback ">
+            <button class="modal-close-button">
+                <span class="visually-hidden">Закрыть</span>
+            </button>
+            <section class="modal-content">
+                <form class="modal-content-form">
+                    <h2 class="modal-title">Мы обязательно ответим вам!</h2>
+                    <input type="text" id="fio" placeholder="Имя и фамилия">
+                    <input type="text" id="login" placeholder="email@example.com">
+                    <textarea id="comment" placeholder="В свободной форме"></textarea>
+                    <button class="button button-minor" type="submit">Отправить</button>
+                </form>
+            </section>
+        </div>
+    </div>
 </body>
 
 </html>
